@@ -6,8 +6,8 @@ namespace PaginatedListAync
     {
         public static Task<PaginatedList<TDestination>> PaginatedListAsync<TDestination>(this IQueryable<TDestination> queryable, int pageNumber, int pageSize, CancellationToken cancellationToken) where TDestination : class
            => PaginatedList<TDestination>.CreateAsync(queryable, pageNumber, pageSize, cancellationToken);
-
     }
+
     public class PaginatedList<T>
     {
         public List<T> Items { get; }
@@ -38,7 +38,4 @@ namespace PaginatedListAync
             return new PaginatedList<T>(items, count, pageNumber, pageSize);
         }
     }
-
-
-
 }
