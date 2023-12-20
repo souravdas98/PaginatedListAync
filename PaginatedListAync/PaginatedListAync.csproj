@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>PaginatedList</Title>
+    <Authors>Sourav Das</Authors>
+    <Company>Graphiye</Company>
+    <Description>The paginate_items function is designed to handle pagination for a given dataset. It takes three input parameters:
+
+data (list or array): The dataset to be paginated.
+
+page_number (integer): The current page number you want to retrieve.
+
+page_size (integer): The number of items to display per page.
+
+The function calculates the necessary pagination information based on the input parameters and returns a dictionary containing the following key-value pairs:
+
+"Items": A list of items for the specified page.
+"PageNumber": The current page number.
+"TotalPages": The total number of pages required to display all the data with the given page size.
+"TotalCount": The total count of items in the dataset.
+"HasPreviousPage": A boolean indicating whether there is a previous page before the current page.
+"HasNextPage": A boolean indicating whether there is a next page after the current page.
+This function helps you efficiently manage and retrieve paginated data, making it useful for implementing pagination in web applications or APIs when dealing with large datasets.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
+  </ItemGroup>
+
+</Project>
